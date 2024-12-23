@@ -1,91 +1,193 @@
-2024-11-18T09:00:56.019-03:00  INFO 16600 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : Starting JpaApplication using Java 23 with PID 16600 (E:\PROJETOS JAVA\jpa\jpa\target\classes started by iosfa in E:\PROJETOS JAVA\jpa)
-2024-11-18T09:00:56.237-03:00  INFO 16600 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-18T09:00:59.151-03:00  INFO 16600 --- [jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-18T09:00:59.262-03:00  INFO 16600 --- [jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 4 JPA repository interfaces.
-2024-11-18T09:00:59.645-03:00  INFO 16600 --- [jpa] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=94de89f8-da8e-3a20-bb82-58929762958f
-2024-11-18T09:01:00.694-03:00  INFO 16600 --- [jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-18T09:01:00.714-03:00  INFO 16600 --- [jpa] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-18T09:01:00.714-03:00  INFO 16600 --- [jpa] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-11-18T09:01:01.007-03:00  INFO 16600 --- [jpa] [main] o.a.c.c.C.[.[localhost].[/bookstore]     : Initializing Spring embedded WebApplicationContext
-2024-11-18T09:01:01.008-03:00  INFO 16600 --- [jpa] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4477 ms
-2024-11-18T09:01:01.884-03:00  INFO 16600 --- [jpa] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-18T09:01:02.104-03:00  INFO 16600 --- [jpa] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-11-18T09:01:02.185-03:00  INFO 16600 --- [jpa] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-18T09:01:03.174-03:00  INFO 16600 --- [jpa] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-18T09:01:03.255-03:00  INFO 16600 --- [jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-18T09:01:03.680-03:00  INFO 16600 --- [jpa] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@cdbe995
-2024-11-18T09:01:03.682-03:00  INFO 16600 --- [jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-18T09:01:06.442-03:00  INFO 16600 --- [jpa] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-18T09:01:07.284-03:00  INFO 16600 --- [jpa] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-18T09:01:08.159-03:00  INFO 16600 --- [jpa] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-11-18T09:01:09.887-03:00  WARN 16600 --- [jpa] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-18T09:01:11.413-03:00  INFO 16600 --- [jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/bookstore'
-2024-11-18T09:01:11.425-03:00  INFO 16600 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : Started JpaApplication in 16.26 seconds (process running for 17.836)
-2024-11-18T09:08:20.058-03:00  INFO 16600 --- [jpa] [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/bookstore]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-18T09:08:20.058-03:00  INFO 16600 --- [jpa] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-18T09:08:20.059-03:00  INFO 16600 --- [jpa] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-18T10:02:05.466-03:00  WARN 16600 --- [jpa] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: status&offset=0&limit=5]
-2024-11-18T10:03:19.257-03:00  WARN 16600 --- [jpa] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: status&offset=0&limit=10]
-2024-11-18T10:03:32.193-03:00  WARN 16600 --- [jpa] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: status&offset=0&limit=10]
-2024-11-18T10:24:24.626-03:00  INFO 16600 --- [jpa] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-18T10:24:24.632-03:00  INFO 16600 --- [jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-18T10:24:24.641-03:00  INFO 16600 --- [jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-18T10:24:45.140-03:00  INFO 15224 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : Starting JpaApplication using Java 23 with PID 15224 (E:\PROJETOS JAVA\jpa\jpa\target\classes started by iosfa in E:\PROJETOS JAVA\jpa)
-2024-11-18T10:24:45.143-03:00  INFO 15224 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-18T10:24:46.170-03:00  INFO 15224 --- [jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-18T10:24:46.254-03:00  INFO 15224 --- [jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 4 JPA repository interfaces.
-2024-11-18T10:24:46.516-03:00  INFO 15224 --- [jpa] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=94de89f8-da8e-3a20-bb82-58929762958f
-2024-11-18T10:24:46.993-03:00  INFO 15224 --- [jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-18T10:24:47.009-03:00  INFO 15224 --- [jpa] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-18T10:24:47.010-03:00  INFO 15224 --- [jpa] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-11-18T10:24:47.085-03:00  INFO 15224 --- [jpa] [main] o.a.c.c.C.[.[localhost].[/bookstore]     : Initializing Spring embedded WebApplicationContext
-2024-11-18T10:24:47.085-03:00  INFO 15224 --- [jpa] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1826 ms
-2024-11-18T10:24:47.286-03:00  INFO 15224 --- [jpa] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-18T10:24:47.347-03:00  INFO 15224 --- [jpa] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-11-18T10:24:47.388-03:00  INFO 15224 --- [jpa] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-18T10:24:47.707-03:00  INFO 15224 --- [jpa] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-18T10:24:47.739-03:00  INFO 15224 --- [jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-18T10:24:47.942-03:00  INFO 15224 --- [jpa] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d28cdcd
-2024-11-18T10:24:47.944-03:00  INFO 15224 --- [jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-18T10:24:49.263-03:00  INFO 15224 --- [jpa] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-18T10:24:49.373-03:00  INFO 15224 --- [jpa] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-18T10:24:50.143-03:00  INFO 15224 --- [jpa] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-11-18T10:24:51.548-03:00  WARN 15224 --- [jpa] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-18T10:24:52.875-03:00  INFO 15224 --- [jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/bookstore'
-2024-11-18T10:24:52.901-03:00  INFO 15224 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : Started JpaApplication in 8.431 seconds (process running for 9.196)
-2024-11-18T12:30:57.655-03:00  INFO 15224 --- [jpa] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/bookstore]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-18T12:30:57.659-03:00  INFO 15224 --- [jpa] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-18T12:30:57.667-03:00  INFO 15224 --- [jpa] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2024-11-18T14:13:19.621-03:00  INFO 15224 --- [jpa] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-18T14:13:19.762-03:00  INFO 15224 --- [jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-18T14:13:19.789-03:00  INFO 15224 --- [jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-18T14:16:00.278-03:00  INFO 23048 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : Starting JpaApplication using Java 23 with PID 23048 (E:\PROJETOS JAVA\jpa\jpa\target\classes started by iosfa in E:\PROJETOS JAVA\jpa)
-2024-11-18T14:16:00.280-03:00  INFO 23048 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-18T14:16:02.281-03:00  INFO 23048 --- [jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-18T14:16:02.374-03:00  INFO 23048 --- [jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
-2024-11-18T14:16:02.639-03:00  INFO 23048 --- [jpa] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=94de89f8-da8e-3a20-bb82-58929762958f
-2024-11-18T14:16:03.222-03:00  INFO 23048 --- [jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-18T14:16:03.242-03:00  INFO 23048 --- [jpa] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-18T14:16:03.243-03:00  INFO 23048 --- [jpa] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-11-18T14:16:03.354-03:00  INFO 23048 --- [jpa] [main] o.a.c.c.C.[.[localhost].[/bookstore]     : Initializing Spring embedded WebApplicationContext
-2024-11-18T14:16:03.372-03:00  INFO 23048 --- [jpa] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2916 ms
-2024-11-18T14:16:03.699-03:00  INFO 23048 --- [jpa] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-18T14:16:03.836-03:00  INFO 23048 --- [jpa] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-11-18T14:16:03.929-03:00  INFO 23048 --- [jpa] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-18T14:16:04.508-03:00  INFO 23048 --- [jpa] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-18T14:16:04.563-03:00  INFO 23048 --- [jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-18T14:16:04.889-03:00  INFO 23048 --- [jpa] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1182d1df
-2024-11-18T14:16:04.891-03:00  INFO 23048 --- [jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-18T14:16:06.511-03:00  INFO 23048 --- [jpa] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-18T14:16:06.820-03:00  INFO 23048 --- [jpa] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-18T14:16:07.393-03:00  INFO 23048 --- [jpa] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-11-18T14:16:08.699-03:00  WARN 23048 --- [jpa] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-18T14:16:09.896-03:00  INFO 23048 --- [jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/bookstore'
-2024-11-18T14:16:09.920-03:00  INFO 23048 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : Started JpaApplication in 10.468 seconds (process running for 11.44)
-2024-11-18T14:16:10.051-03:00  INFO 23048 --- [jpa] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/bookstore]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-18T14:16:10.052-03:00  INFO 23048 --- [jpa] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-18T14:16:10.054-03:00  INFO 23048 --- [jpa] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-11-18T14:16:53.707-03:00  WARN 23048 --- [jpa] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
-2024-11-18T14:17:24.772-03:00  INFO 23048 --- [jpa] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-18T14:17:24.774-03:00  INFO 23048 --- [jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-18T14:17:24.783-03:00  INFO 23048 --- [jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-16T00:23:41.178-03:00  WARN 17148 --- [jpa] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object id: ASC
+2024-12-16T00:23:41.214-03:00  WARN 17148 --- [jpa] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object id: ASC]
+2024-12-16T01:18:30.152-03:00  WARN 17148 --- [jpa] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object id: ASC
+2024-12-16T01:18:30.154-03:00  WARN 17148 --- [jpa] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object id: ASC]
+2024-12-16T09:54:20.173-03:00  INFO 17148 --- [jpa] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-16T09:54:20.200-03:00  INFO 17148 --- [jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-16T09:54:20.210-03:00  INFO 17148 --- [jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-16T09:54:38.120-03:00  INFO 16896 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : Starting JpaApplication using Java 23 with PID 16896 (E:\PROJETOS JAVA\jpa\jpa\target\classes started by iosfa in E:\PROJETOS JAVA\jpa)
+2024-12-16T09:54:38.124-03:00  INFO 16896 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-16T09:54:39.859-03:00  INFO 16896 --- [jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-16T09:54:39.983-03:00  INFO 16896 --- [jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 4 JPA repository interfaces.
+2024-12-16T09:54:40.227-03:00  INFO 16896 --- [jpa] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=94de89f8-da8e-3a20-bb82-58929762958f
+2024-12-16T09:54:40.742-03:00  INFO 16896 --- [jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-16T09:54:40.762-03:00  INFO 16896 --- [jpa] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-16T09:54:40.762-03:00  INFO 16896 --- [jpa] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-16T09:54:40.851-03:00  INFO 16896 --- [jpa] [main] o.a.c.c.C.[.[localhost].[/bookstore]     : Initializing Spring embedded WebApplicationContext
+2024-12-16T09:54:40.851-03:00  INFO 16896 --- [jpa] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2356 ms
+2024-12-16T09:54:41.098-03:00  INFO 16896 --- [jpa] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-16T09:54:41.191-03:00  INFO 16896 --- [jpa] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-16T09:54:41.242-03:00  INFO 16896 --- [jpa] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-16T09:54:41.679-03:00  INFO 16896 --- [jpa] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-16T09:54:41.723-03:00  INFO 16896 --- [jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-16T09:54:41.962-03:00  INFO 16896 --- [jpa] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@324e8baa
+2024-12-16T09:54:41.964-03:00  INFO 16896 --- [jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-16T09:54:43.339-03:00  INFO 16896 --- [jpa] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-16T09:54:43.601-03:00  INFO 16896 --- [jpa] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-16T09:54:43.916-03:00  INFO 16896 --- [jpa] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-16T09:54:44.949-03:00  WARN 16896 --- [jpa] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-16T09:54:45.498-03:00  INFO 16896 --- [jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/bookstore'
+2024-12-16T09:54:45.510-03:00  INFO 16896 --- [jpa] [main] com.bookstore.jpa.JpaApplication         : Started JpaApplication in 8.306 seconds (process running for 14.027)
+2024-12-16T09:54:56.288-03:00  INFO 16896 --- [jpa] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/bookstore]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-16T09:54:56.292-03:00  INFO 16896 --- [jpa] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-16T09:54:56.302-03:00  INFO 16896 --- [jpa] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2024-12-16T09:54:57.146-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-1] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2024-12-16T12:05:24.549-03:00 ERROR 16896 --- [jpa] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/bookstore] threw exception [Request processing failed: java.time.format.DateTimeParseException: Text '11/12/2024 59:59:59' could not be parsed: Invalid value for HourOfDay (valid values 0 - 23): 59] with root cause
+
+java.time.DateTimeException: Invalid value for HourOfDay (valid values 0 - 23): 59
+	at java.base/java.time.temporal.ValueRange.checkValidIntValue(ValueRange.java:338) ~[na:na]
+	at java.base/java.time.temporal.ChronoField.checkValidIntValue(ChronoField.java:740) ~[na:na]
+	at java.base/java.time.format.Parsed.resolveTime(Parsed.java:616) ~[na:na]
+	at java.base/java.time.format.Parsed.resolveTimeLenient(Parsed.java:581) ~[na:na]
+	at java.base/java.time.format.Parsed.resolve(Parsed.java:266) ~[na:na]
+	at java.base/java.time.format.DateTimeParseContext.toResolved(DateTimeParseContext.java:331) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2114) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:2010) ~[na:na]
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494) ~[na:na]
+	at com.bookstore.jpa.services.BookService.findBooks(BookService.java:68) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355) ~[spring-aop-6.1.13.jar:6.1.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716) ~[spring-aop-6.1.13.jar:6.1.13]
+	at com.bookstore.jpa.services.BookService$$SpringCGLIB$$0.findBooks(<generated>) ~[classes/:na]
+	at com.bookstore.jpa.controllers.BookController.getBooks(BookController.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2024-12-16T12:06:17.424-03:00 ERROR 16896 --- [jpa] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/bookstore] threw exception [Request processing failed: java.time.format.DateTimeParseException: Text '11/12/2024 59:59:00' could not be parsed: Invalid value for HourOfDay (valid values 0 - 23): 59] with root cause
+
+java.time.DateTimeException: Invalid value for HourOfDay (valid values 0 - 23): 59
+	at java.base/java.time.temporal.ValueRange.checkValidIntValue(ValueRange.java:338) ~[na:na]
+	at java.base/java.time.temporal.ChronoField.checkValidIntValue(ChronoField.java:740) ~[na:na]
+	at java.base/java.time.format.Parsed.resolveTime(Parsed.java:616) ~[na:na]
+	at java.base/java.time.format.Parsed.resolveTimeLenient(Parsed.java:581) ~[na:na]
+	at java.base/java.time.format.Parsed.resolve(Parsed.java:266) ~[na:na]
+	at java.base/java.time.format.DateTimeParseContext.toResolved(DateTimeParseContext.java:331) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2114) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:2010) ~[na:na]
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494) ~[na:na]
+	at com.bookstore.jpa.services.BookService.findBooks(BookService.java:68) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355) ~[spring-aop-6.1.13.jar:6.1.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716) ~[spring-aop-6.1.13.jar:6.1.13]
+	at com.bookstore.jpa.services.BookService$$SpringCGLIB$$0.findBooks(<generated>) ~[classes/:na]
+	at com.bookstore.jpa.controllers.BookController.getBooks(BookController.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2024-12-16T12:10:09.580-03:00  WARN 16896 --- [jpa] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s309ms58µs700ns).
+2024-12-16T12:11:39.768-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC
+2024-12-16T12:11:39.769-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC]
+2024-12-16T12:13:25.511-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC
+2024-12-16T12:13:25.512-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC]
+2024-12-16T12:13:26.091-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC
+2024-12-16T12:13:26.091-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC]
+2024-12-16T19:12:04.462-03:00  WARN 16896 --- [jpa] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h55m9s368ms576µs800ns).
+2024-12-16T19:12:06.036-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC
+2024-12-16T19:12:06.037-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC]
+2024-12-16T19:12:06.054-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC
+2024-12-16T19:12:06.054-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC]
+2024-12-16T19:12:06.069-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC
+2024-12-16T19:12:06.069-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC]
+2024-12-16T19:12:06.083-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC
+2024-12-16T19:12:06.084-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC]
+2024-12-16T19:12:06.109-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC
+2024-12-16T19:12:06.109-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC]
+2024-12-16T19:12:06.115-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC
+2024-12-16T19:12:06.116-03:00  WARN 16896 --- [jpa] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Couldn't serialize object createdAt: ASC]

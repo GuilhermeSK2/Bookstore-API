@@ -3,13 +3,17 @@ package com.bookstore.jpa.controllers;
 import com.bookstore.jpa.clients.PublisherClient;
 import com.bookstore.jpa.dtos.BookRecordDto;
 import com.bookstore.jpa.models.BookModel;
-import com.bookstore.jpa.models.PublisherModel;
 import com.bookstore.jpa.services.BookService;
 import com.bookstore.jpa.services.PublisherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Page;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.UUID;
@@ -27,15 +31,24 @@ public class BookController {
     private PublisherService publisherService;
 
 
+    @GetMapping
+    public ResponseEntity<Page<BookModel>> getBooks(
+            @RequestParam(required = false) Boolean isActive,
+            @RequestParam(required = false) String title,
+            @RequestParam(required = false) String publisher,
+            @RequestParam(required = false) String author,
+            @RequestParam(defaultValue = "01/01/2000 00:00:00") String startDate,
+            @RequestParam(defaultValue = "01/01/2200 00:00:00") String endDate,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortField,
+            @RequestParam(defaultValue = "ASC") String sortDirection) {
 
-    @GetMapping("/status")
-    public List<BookModel> getBooks(@RequestParam(required = false) Boolean isActive) {
-        if (isActive == null) {
-            // Se isActive for null, retorna todos os livros
-            return bookService.getAllBooks();
-        }
-        return bookService.getBooksByStatus(isActive);
+
+        Page<BookModel> books = bookService.findBooks(isActive, title, publisher, author, startDate, endDate, page, size, sortField, sortDirection);
+        return ResponseEntity.ok(books);
     }
+
 
 
     //Busca por titulo ou id

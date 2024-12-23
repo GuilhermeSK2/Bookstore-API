@@ -13,9 +13,16 @@ import com.bookstore.jpa.repositories.AuthorRepository;
 import com.bookstore.jpa.repositories.BookRepository;
 import com.bookstore.jpa.repositories.PublisherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -41,10 +48,32 @@ public class BookService {
         return bookRepository.findAll();
     }
 
-    // Retorna livros com base no status
-    public List<BookModel> getBooksByStatus(Boolean isActive) {
-        return bookRepository.findByIsActive(isActive);
+    // Retorna livros com base no parâmetro
+    public Page<BookModel> findBooks(
+            Boolean isActive,
+            String title,
+            String publisher,
+            String author,
+            String startDate,
+            String endDate,
+            int page,
+            int size,
+            String sortField,
+            String sortDirection) {
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+
+        // Converte as datas diretamente
+        LocalDateTime start = LocalDateTime.parse(startDate, formatter);
+        LocalDateTime end = LocalDateTime.parse(endDate, formatter);
+
+        Sort sort = Sort.by(Sort.Direction.fromString(sortDirection), sortField);
+        Pageable pageable = PageRequest.of(page, size, sort);
+
+        // Passa as datas convertidas diretamente
+        return bookRepository.findBooksByFiltersAndDate(isActive, title, publisher, author, start, end, pageable);
     }
+
 
 
     public void updateBookStatus(UUID id) {

@@ -1,10 +1,12 @@
 package com.bookstore.jpa.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -22,13 +24,11 @@ public class BookModel implements Serializable {
     @Column(nullable = false, unique = true)
     private String title;
 
-    //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @ManyToOne//(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "publisher_id")
     private PublisherModel publisher;
 
-    //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @ManyToMany//(fetch = FetchType.LAZY)
+    @ManyToMany
     @JoinTable(
             name = "tb_book_author",
             joinColumns = @JoinColumn(name = "book_id"),
@@ -41,6 +41,16 @@ public class BookModel implements Serializable {
     @Column(nullable = false)
     private boolean isActive;
 
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
+    @Column(nullable = false, updatable = false)
+    private LocalDateTime createdAt;
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = LocalDateTime.now();
+    }
+
+    // Getters e Setters
     public UUID getId() {
         return id;
     }
@@ -79,5 +89,9 @@ public class BookModel implements Serializable {
 
     public void setReview(ReviewModel review) {
         this.review = review;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 }
